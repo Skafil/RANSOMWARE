@@ -6,7 +6,7 @@ from cryptography.fernet import Fernet
 files = []
 
 for file in os.listdir():
-        if file == "coding.py" or file == "key_file":
+        if file == "coding.py" or file == "crypto_key.key" or file == "decoding.py":
           continue
         if os.path.isfile(file):
           files.append(file)
