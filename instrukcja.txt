@@ -1,0 +1,3 @@
+1) Uruchomić plik decoding.py   -->     python decoding.py
+2) Uruchomić plik coding.py w osobnym cmd    -->     python coding.py
+3) Postepowac zgodnie z poleceniami wyświetlanymi w cmd
