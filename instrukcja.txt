@@ -1,3 +1,16 @@
 1) Uruchomić plik decoding.py   -->     python decoding.py
 2) Uruchomić plik coding.py w osobnym cmd    -->     python coding.py
 3) Postepowac zgodnie z poleceniami wyświetlanymi w cmd
+
+PRZED URUCHOMIENIEM
+pip install cryptography
+pip install socket
+pip install winregistry
+
+
+PO URUCHOMIENIU
+Win + R --> wpisujemy regedit
+Wchodzimy na adres: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\my_reg
+usuwamy my_reg
+
+W ten sposób klucz dodany przez skrypt zostanie usunięty i wszyscy będą szcześliwi
